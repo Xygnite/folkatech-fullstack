@@ -22,7 +22,7 @@ class JwtAuthController extends Controller
             [
                 'name' => 'required',
                 'last_name' => 'required',
-                'email' => 'required|email',
+                'email' => 'required|email|unique:users,email',
                 'phone_number' => 'required',
                 'password' => 'required',
                 'c_password' => 'required|same:password',
